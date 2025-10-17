@@ -1,0 +1,175 @@
+{
+
+"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active":"<span color='#821519'></span>",
+			"default":"<span color='#282829'></span>",
+			"empty":"<span color='#282820'></span>"
+			},
+		"persistent-workspaces": {
+			"Virtual-1": [1, 2, 3, 4, 5]
+			}
+		},
+
+	"custom/trayic":
+	{
+		"format": "",
+		"tooltip":false
+
+	},
+	"tray":
+	{
+		"icon-size": 16,
+		"spacing": 10
+	},
+
+	"custom/rofisearch":
+	{
+		"format": "<span color='#458588'></span>",
+		"tooltip":false,
+		"on-click":"rofi -disable-history -show drun"
+	},
+	"custom/spotifylogo":
+	{
+	//	"format": "󰓇",
+		"format": "<span color='#0fb6ca'>󰝚</span>",
+		"tooltip":false
+	},
+	"custom/pp":
+	{
+		"format": "<span color='#0fb6ca'>󰐊</span>",
+		"tooltip":false,
+		"on-click": "playerctl play-pause"
+	
+	},
+	"custom/prev":
+	{
+		"format": "<span color='#b2b7b4'>󰒮</span>",
+		"tooltip":false,
+		"on-click": "playerctl previous"
+	},
+	"custom/next":
+	{
+		"format": "<span color='#b2b7b4'>󰒭</span>",
+		"tooltip":false,
+		"on-click": "playerctl next"
+
+	},
+	"custom/spotify":
+	{
+		
+		"exec":"~/.config/waybar/scripts/mediaplayer.py --player spotify",
+		"format":"<span color='#0fb6ca'>{}</span>",
+		"return-type":"json",
+		"rotate":270
+	},
+	"custom/power":
+	{
+		"format": "<span color='#0fb6ca'></span>",
+		"tooltip":false,
+		"on-click": "~/shellscripts/pwrbtn.sh"
+	},
+	"custom/quit":
+	{
+		"format": "<span color='#821519'>󰗽</span>",
+		"tooltip": false,
+		"on-click": "hyprctl dispatch exit"	
+	},
+	"custom/lock": 
+	{
+		"format": "<span color='#821519'></span>",
+		"on-click": "hyprlock",
+		"tooltip": false
+	},
+	"custom/reboot":
+	{
+		"format": "<span color='#d79921'></span>",
+		"tooltip": false,
+		"on-click": "reboot"
+	},
+	
+	"pulseaudio":
+	{
+		"format": "{icon}<span color='#b5b4b1'>{volume}</span>",
+		"format-muted": "<span color='#F7DA63'>MUTE</span>",
+		"on-click": "pavucontrol",
+		"on-click-right":"bash -c 'pactl set-source-mute $(pactl get-default-sink) toggle'",
+		"format-icons": 
+		{	
+			"default": ["",""," "] 
+		}
+	},
+
+	"custom/sep":
+	{
+		"format":"|",
+		"interval":"once",
+		"tooltip": false
+	},
+	"network":
+	{	
+		"interface": "wlan0",
+		"interval": 1,
+		"format-wifi": "",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "<span color='#F7DA63'>  NO CONNECTION</span>",
+		"tooltip-format": "{ipaddr} <span color='#cc241d'></span> {bandwidthDownBytes} <span color='#458588'></span> {bandwidthUpBytes}" 
+	},
+	
+	"clock":
+	{
+		"format":"<span color='#b5b4b1'>{:%I:%M}</span>",
+		"tooltip-format":"<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>"
+	},
+	"clock#verta":
+	{
+		"format":"<span color='#b5b4b1'>{:%I}</span>",
+		"tooltip-format":"<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>"
+	},
+	"clock#vertb":
+	{
+		"format":"<span color='#b5b4b1'>{:%M}</span>"
+	},
+
+	"clock#long": 
+	{
+	
+		"format":"<span color='#b5b4b1'> {:%B %d, %Y - %I:%M} </span>",
+		"tooltip-format":"<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>"
+	},
+	"cpu":
+	{
+		"format": "<span color='#b21d24'> </span> {usage}%",
+		"tooltip": true
+	},
+
+	"memory":
+	{
+		"format": "<span color='#0fb6ca'> </span> {}%"
+	},
+
+	"disk":
+	{
+		"path": "/",
+		"interval": 30,
+		"format": "<span color='#005066'>󰋊</span> {free}",
+		"unit": "GB"
+	},
+
+	"disk#nvme":
+	{
+		"path": "/home/bailey/nvme",
+		"interval": 30,
+		"format": "<span color='#0fb6ca'>󰋊</span> {free}",
+		"unit": "GB"
+	},
+
+	"disk#ssd":
+	{
+		"path": "/home/bailey/ssd",
+		"interval": 30,
+		"format": "<span color='#b21d24'>󰋊</span> {free}",
+		"unit": "GB"
+	}
+}

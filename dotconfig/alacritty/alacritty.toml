@@ -1,0 +1,20 @@
+[window]
+opacity = 0.45
+padding.x = 10
+padding.y = 10
+[font]
+size = 16.0
+[font.normal]
+family = "ShureTechMono Nerd Font"
+
+[general]
+import = [ "~/.config/alacritty/themes/skyline.toml" ]
+
+[bell]
+duration = 0
+
+[cursor]
+vi_mode_style = "None"
+[cursor.style]
+shape = "Underline"
+blinking = "Always"

@@ -1,0 +1,28 @@
+* {
+	font-family: ShureTechMono Nerd Font;
+	font-size: 16px;
+	color: #bec1bf;
+  }
+
+  window#waybar {
+  	background-color:transparent;
+  }
+
+#cpu {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+#memory {
+	padding-right: 1em;
+}
+#disk {
+	padding-right: 1em;
+}
+
+.modules-center{
+	margin-left: 4px;
+	margin-right: 4px
+}
+#clock-long{
+	 font-size: 48px;
+}

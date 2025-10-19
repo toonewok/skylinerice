@@ -8,4 +8,4 @@ configuration {
 
 }
 
-@theme "~/.config/rofi/themes/list/port-skyline.rasi"
+@theme "~/.config/rofi/themes/list/skyline.rasi"

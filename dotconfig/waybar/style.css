@@ -1,28 +1,90 @@
 * {
 	font-family: ShureTechMono Nerd Font;
-	font-size: 16px;
-	color: #bec1bf;
+
   }
 
   window#waybar {
-  	background-color:transparent;
+  	background-color: transparent;
+	border: 2px;
+	border-radius: 2px;
   }
 
-#cpu {
-	padding-left: 1em;
-	padding-right: 1em;
+#workspaces {
+	
+
 }
-#memory {
-	padding-right: 1em;
+
+#workspaces button {
+	color:#005066;
+	margin-right:7px;
+
+
 }
-#disk {
-	padding-right: 1em;
+
+#workspaces button.active {
+	margin-right:7px;
+	color:#0fb6ca;
+}
+
+#workspaces button:hover {
+	margin-right:7px;
+	color:#b21d24;
+	background-color: transparent;
+}
+
+#custom-musiclogo{
+	padding: 1em;
+}
+#custom-sep{
+	color: #0fb6ca;
+
+}
+#custom-power{
+	color: #b21d24;
+	font-size:32px;
+	margin-right:7px;
+}
+#custom-trayic,
+#custom-calc,
+#custom-youtube,
+#custom-github,
+#custom-spotify,
+#custom-steam,
+#custom-firefox,
+#custom-filebrowser{
+	margin-right:7px;
+}
+
+
+.soft-group{
+	background-color: #000000;
+	margin-right:0px;
+
+}
+
+
+.modules-left{
+	font-size: 24px;
+	color: #bec1bf;
+	border: 0px;
+	border-radius: 4px;
+	opacity: 0.8;
 }
 
 .modules-center{
-	margin-left: 4px;
-	margin-right: 4px
+	font-size: 20px;
+	color: #bec1bf;
+	border: 0px;
+	border-radius: 4px;
+	opacity: 0.8;
 }
-#clock-long{
-	 font-size: 48px;
+.modules-right{
+	font-size: 24px;
+	color: #bec1bf;
+	border: 0px;
+	border-radius: 4px;
+
+	opacity: 0.8;
 }
+
+

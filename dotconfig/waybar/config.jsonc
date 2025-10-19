@@ -10,44 +10,69 @@
 	"include": "~/.config/waybar/modules.jsonc",
 	"output":"DP-3",
 	//"layer": "top",
-	"position": "right",
+	"position": "left",
 	"mod":"dock",
-	"spacing": 0,
-	"margin-right": 4,
-	"margin-left": 0,
-	"margin-top": 4,
-	"margin-bottom": 4,
+	"width":50,
+	"spacing": 4,
+	"margin-right": 0,
+	"margin-left": 5,
+	"margin-top": 50,
+	"margin-bottom": 50,
 
 //--------------------------------------------
 // module layout
 //--------------------------------------------
 	"modules-left":
 	[
-		"custom/power"
+		
+	"hyprland/workspaces",
+	"custom/sep",
+	"group/media"
 			
 	],
 	"modules-center":
-	[
-		"custom/spotify"
+	[	
+		"custom/spotify-out"
 	],
 	"modules-right":
 	[	
 		"group/misc",
-		"group/media",
+		"custom/sep",
+		"group/soft",
+		"custom/sep",
+		"group/vertclock",
+		"custom/sep",
+		"group/pwr"
+	],
+	"group/vertclock":
+	{
+		"orientation":"vertical",
+		"modules": [
 		"clock#verta",
 		"clock#vertb"
-	],
+		]
+	},
+	"group/soft":
+	{
+		"orientation":"vertical",
+		"class":"soft-group",
+		"modules":[
+			"custom/steam",
+			"custom/spotify",
+			"custom/github",
+			"custom/youtube",
+			"custom/firefox",
+			"custom/calc",
+			"custom/filebrowser"
+				
+		]
+	},
+
 	"group/media":
 	{
 		"orientation":"vertical",
-		"drawer": {
-		"transition-duration": 500,
-		"children-class": "not-power",
-		"transition-left-to-right": false
-		},
 		
 		"modules":[
-			"custom/spotifylogo",
 			"custom/pp",
 			"custom/prev",
 			"custom/next"
@@ -56,7 +81,8 @@
 	},
 
 	"group/misc":
-	{
+	{	
+		"rotate":90,
 		"orientation":"vertical",
 		"drawer":{
 				"transition-duration": 500,
@@ -68,6 +94,7 @@
 
 	"group/pwr":
 	{
+		"position": "right",
 		"orientation": "vertical",
 		"drawer": {
 			"transition-duration": 500,
@@ -81,25 +108,7 @@
 
 },
 
-{
-	"include": "~/.config/waybar/modules.jsonc",
-	"output":"DP-3",
-	//"layer": "top",
-	"position": "bottom",
-	"mod":"dock",
-	"spacing": 0,
-	
-	"modules-left":
-	[
-		"hyprland/window"	
-	],
-	"modules-center":
-	[
-		"cpu", "memory", "disk", "disk#nvme", "disk#ssd"
-	]
 
-
-},
 {
 	"include": "~/.config/waybar/modules.jsonc",
 	"output":"DP-4",
@@ -111,9 +120,13 @@
 	"modules-center":
 	[
 		"clock#long"
+
 	]
 
 
 }
+
+
+
 
 ]

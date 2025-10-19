@@ -1,0 +1,22 @@
+/****
+Color file
+****/
+
+* {
+	font: "ShureTechMono Nerd Font 22";
+	fg0: #bec1bf;
+	bg0trans: #001921CC;
+	bgredtrans: #b21d24CC;
+	bg0: #001921;
+	bg1: #282a2e;
+	sel: #0fb6ca;
+	act: #56bfcc;
+	accent: #005066;
+
+	debug: #F49999;
+	red0: #e0000b;
+
+
+
+}
+@import "list.rasi"
